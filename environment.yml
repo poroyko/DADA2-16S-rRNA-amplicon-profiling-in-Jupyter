@@ -1,0 +1,21 @@
+name: dada2-16s
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - r-base=4.4
+  - r-irkernel
+  - jupyterlab
+  - bioconductor-dada2
+  - bioconductor-phyloseq
+  - bioconductor-decontam
+  - bioconductor-ancombc
+  - bioconductor-aldex2
+  - r-vegan
+  - r-tidyverse
+  - cutadapt
+  # Known compatibility pins:
+  - tbb=2020.2      # dada2 fails to load with newer TBB (undefined symbol _ZTIN3tbb4taskE)
+  - r-cvxr<1.9      # ANCOMBC 2.8 imports CVXR::solve, removed in CVXR 1.9
+  - r-lme4>=1.1.36  # the CVXR pin otherwise pulls an old lme4 built against an older Matrix ABI
+  - r-reformulas    # required by current lmerTest/ANCOMBC, not always pulled in
