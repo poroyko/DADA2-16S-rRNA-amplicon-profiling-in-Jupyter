@@ -425,4 +425,4 @@ The SILVA data are licensed under CC BY 4.0. If you use the SILVA training files
 
 ## License
 
-Add a license for this repository (e.g. MIT). The SILVA reference data are distributed separately under CC BY 4.0.
+MIT License. The SILVA reference data are distributed separately under CC BY 4.0.
